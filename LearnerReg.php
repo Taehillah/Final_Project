@@ -69,6 +69,10 @@
         .content {
             padding: 20px;
         }
+
+        .takeDown{
+            padding-top: 10px;
+        }
         .center {
             max-width: 500px;
             margin: auto;
@@ -164,7 +168,7 @@
             </li>
         </ul>
     </div>
-    <div class="center"><h2 style="color: white;">BUS REGISTRATION System <br>(Guardian / Learner)</h2></div>
+    <div class="center takeDown"><h2 style="color: white;">BUS REGISTRATION System <br>(Guardian / Learner)</h2></div>
     <div class="content">
         <!-- Registration page for learners or guardians -->
         <form action="register.php" method="post" onsubmit="return validateForm()">
