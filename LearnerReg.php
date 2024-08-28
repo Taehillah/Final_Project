@@ -9,7 +9,7 @@
             font-family: 'Roboto', sans-serif;
             background-image: url('images/bk2.jpg');
             margin: 0;
-            padding-top: 60px; /* space for the fixed navbar */
+            padding-top: 60px;
         }
         .navbar {
             display: flex;
