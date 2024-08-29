@@ -1,14 +1,14 @@
 -- Table structure for table `Administrators`
 --
 
-CREATE TABLE `Administrators` (
-  `Admin_id` int(11) NOT NULL,
-  `First_Names` varchar(255) NOT NULL,
-  `Surname` varchar(255) NOT NULL,
-  `Email_of_Administrator` varchar(255) NOT NULL,
-  `Contacts_of_Administrator` varchar(15) NOT NULL,
+CREATE TABLE Administrators (
+  `Admin_id` int 11 NOT NULL,
+  `First_Names` varchar 255 NOT NULL,
+  `Surname` varchar 255 NOT NULL,
+  `Email_of_Administrator` varchar 255 NOT NULL,
+  `Contacts_of_Administrator` varchar 15 NOT NULL,
   `Role` enum('Guardian','Learner','Administrator') NOT NULL,
-  `PasswordHash` varchar(255) NOT NULL
+  `PasswordHash` varchar 255 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -31,12 +31,12 @@ INSERT INTO `Administrators` (`Admin_id`, `First_Names`, `Surname`, `Email_of_Ad
 -- Table structure for table `Buses`
 --
 
-CREATE TABLE `Buses` (
-  `Bus_id` int(11) NOT NULL,
-  `Bus_Registration` varchar(15) NOT NULL,
-  `Route` varchar(255) NOT NULL,
-  `Capacity` int(11) NOT NULL,
-  `Schedule` varchar(255) NOT NULL
+CREATE TABLE Buses (
+  `Bus_id` int 11 NOT NULL,
+  `Bus_Registration` varchar 15  NOT NULL,
+  `Route` varchar 255 NOT NULL,
+  `Capacity` int 11 NOT NULL,
+  `Schedule` varchar 255 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -52,11 +52,12 @@ INSERT INTO `Buses` (`Bus_id`, `Bus_Registration`, `Route`, `Capacity`, `Schedul
 -- Table structure for table `Registrations`
 --
 
-CREATE TABLE `Registrations` (
-  `Registration_id` int(11) NOT NULL,
-  `Learner_id` int(11) DEFAULT NULL,
-  `Bus_id` int(11) DEFAULT NULL,
-  `Status` enum('Registered','Unregistered') NOT NULL,
+CREATE TABLE Registrations 
+  (
+  `Registration_id` int 11 NOT NULL,
+  `Learner_id` int 11 DEFAULT NULL,
+  `Bus_id` int 11 DEFAULT NULL,
+  `Status` enum 'Registered','Unregistered' NOT NULL,
   `Registration_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -66,19 +67,19 @@ CREATE TABLE `Registrations` (
 -- Table structure for table `Users`
 --
 
-CREATE TABLE `Users` (
-  `Learner_id` int(11) NOT NULL,
-  `Names_of_Learner` varchar(255) NOT NULL,
-  `Names_of_Guardian` varchar(255) DEFAULT NULL,
-  `Email_of_Guardian` varchar(255) NOT NULL,
-  `Contacts_of_Guardian` varchar(15) NOT NULL,
+CREATE TABLE Users (
+  'Learner_id' int 11 NOT NULL,
+  `Names_of_Learner` varchar 255  NOT NULL,
+  `Names_of_Guardian` varchar 255  DEFAULT NULL,
+  `Email_of_Guardian` varchar 255 NOT NULL,
+  `Contacts_of_Guardian` varchar 15 NOT NULL,
   `Role` enum('Guardian','Learner','Aministrator') NOT NULL,
   `Class` enum('10A','10B','10C','11A','11B','11C','12A','12B','12C') DEFAULT NULL,
   `Status` enum('New Learner','Current Learner') DEFAULT NULL,
   `Location` enum('Rooihuiskraal','Wierdapark','Centurion') NOT NULL,
-  `PasswordHash` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+  `PasswordHash` varchar 255 NOT NULL
+  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+)
 --
 -- Dumping data for table `Users`
 --
